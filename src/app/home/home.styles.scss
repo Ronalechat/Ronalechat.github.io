@@ -5,6 +5,7 @@ $mzl-light-blue: #90CCF4;
 $mzl-blue: #5DA2D5;
 $mzl-dark-grey: #3E3E3E;
 $mzl-grey: #ECECEC;
+$mzl-green: #4FC5B6;
 
 html, body {
   width:100%;
@@ -25,7 +26,7 @@ home {
 .home-container {
   margin:10vh 11vh 0 11vh;
   background-color: $mzl-grey;
-  height: 81vh;
+  height: 80vh;
   overflow-y: hidden;
   font-size:0;
   .third {
@@ -33,17 +34,30 @@ home {
     width:33.33333333%;
     display: inline-block;
     height: calc(100%);
-    // border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    .animation-layer {
+      display: inline-block;
+      height:100%;
+      width: 100%;
+      span {
+        font-size: 5vh
+      }
+    }
   }
   .home-link{
     &-about {
-      background-color: $mzl-red;
-    }
-    &-work {
       background-color: $mzl-yellow;
     }
-    &-contact {
+    &-work {
       background-color: $mzl-light-blue;
     }
+    &-contact {
+      background-color: $mzl-red;
+    }
   }
+}
+
+.animation-layer:hover {
+  transition: transform .1s ease-in;
+  transform: scale(0.98);
 }

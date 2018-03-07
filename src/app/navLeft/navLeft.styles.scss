@@ -46,9 +46,9 @@ $mzl-grey: #ECECEC;
 }
 
 .left:hover {
-  background-color: $mzl-red;
+  transition: all .4s ease-in;
+  background-color: $mzl-yellow;
   & .vertical-text-left {
-    transition: all 100ms ease-in;
     visibility: hidden;
   }
   & .fa-child {

@@ -5,6 +5,7 @@ $mzl-light-blue: #90CCF4;
 $mzl-blue: #5DA2D5;
 $mzl-dark-grey: #3E3E3E;
 $mzl-grey: #ECECEC;
+$mzl-green: #4FC5B6;
 $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
 
 .header {
@@ -45,7 +46,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
         height: 1px;
         bottom: 0;
         left: 0;
-        background-color: $mzl-red;
+        background-color: $mzl-blue;
         visibility: hidden;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
