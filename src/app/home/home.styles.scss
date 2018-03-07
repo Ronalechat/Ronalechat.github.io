@@ -1,0 +1,49 @@
+// Color variables
+$mzl-red: #F78888;
+$mzl-yellow: #F3D250;
+$mzl-light-blue: #90CCF4;
+$mzl-blue: #5DA2D5;
+$mzl-dark-grey: #3E3E3E;
+$mzl-grey: #ECECEC;
+
+html, body {
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+home {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.home-container {
+  margin:10vh 11vh 0 11vh;
+  background-color: $mzl-grey;
+  height: 81vh;
+  overflow-y: hidden;
+  font-size:0;
+  .third {
+    font-size: 0;
+    width:33.33333333%;
+    display: inline-block;
+    height: calc(100%);
+    // border: 1px solid black;
+  }
+  .home-link{
+    &-about {
+      background-color: $mzl-red;
+    }
+    &-work {
+      background-color: $mzl-yellow;
+    }
+    &-contact {
+      background-color: $mzl-light-blue;
+    }
+  }
+}
