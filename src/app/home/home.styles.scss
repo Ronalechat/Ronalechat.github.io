@@ -18,13 +18,12 @@ html, body {
 
 home {
   display: inline-block;
-  text-align: center;
   width: 100%;
   height: 100%;
 }
 
 .home-container {
-  margin:10vh 11vh 0 11vh;
+  margin:10vh 0 0 0;
   background-color: $mzl-grey;
   height: 80vh;
   overflow-y: hidden;
@@ -36,8 +35,9 @@ home {
     display: inline-block;
     height: 100%;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
     .animation-layer {
-      transition: transform .1s ease-out;
+      transition: transform .08s ease-out;
       display: inline-block;
       height:100%;
       width: 100%;
@@ -45,11 +45,14 @@ home {
         font-size: 5vh
       }
     }
+    .animation-layer:hover {
+      transition: transform .08s ease-in;
+      transform: scale(1.02);
+    }
   }
   .home-link{
     &-about {
       background-color: $mzl-yellow;
-      z-index: 100;
     }
     &-rotv {
       background-color: $mzl-light-blue;
@@ -61,21 +64,25 @@ home {
           z-index: 10;
           color: white;
           text-align: left;
-          padding: 1vh;
+          padding: 0.6vh;
         }
         .credit {
-          opacity: 0.8;
-          margin-left: 16vw;
-          margin-top: 74vh;
+          opacity: 0.7;
+          margin-left: 10vw;
+          margin-top: 75vh;
+          min-width: 18vw;
+          width:100%;
         }
         .title-text {
-          opacity: 0.6;
+          opacity: 0.5;
           font-size: 7vh;
           &.top {
             margin-top: 42vh;
           }
           &.middle {
             margin-top: 47.1vh;
+            min-width: 20vw;
+            width:100%;
           }
           &.bottom {
             margin-top:52.2vh;
@@ -90,44 +97,99 @@ home {
             position: relative;
             background-image: url('/assets/img/ROTVstabby.jpg');
             width:120vh;
-            height:80vh;
+            height:100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            left: -26.3vh;
+            left: -45.4%;
             display: block;
             -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
-            // -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 31% 100%, 22% 51%, 36% 0);
-            // clip-path: polygon(75% 0, 88% 50%, 74% 100%, 31% 100%, 22% 51%, 36% 0);
+            clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
           }
         }
       }
+      .rotv-container:hover{
+        & .rotv-image {
+          transition: all 0.08s ease-in;
+          opacity: 0.75;
+          left: -82.8%;
+        }
+        & .rotv-text {
+          transition: opacity 0.08s ease-in;
+          opacity: 1;
+        }
+      }
     }
-    &-contact {
+    &-wrs {
       background-color: $mzl-red;
-      z-index: 100;
+      z-index: 12;
+      .wrs-container {
+        .wrs-link {
+          position:relative;
+        }
+        .wrs-image {
+          margin-left: 0;
+          transition: all 0.08s ease-out;
+          position: relative;
+          background-image: url('/assets/img/wrsScreenGrab.png');
+          width:100%;
+          height:190%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 110% 50%;
+          left: -0.1vw;
+          display: block;
+          -webkit-clip-path: polygon(80% 0, 100% 53%, 100% 100%, 0 100%, 0 54%, 0 0);
+          clip-path: polygon(80% 0, 100% 53%, 100% 100%, 0 100%, 0 54%, 0 0);
+        }
+        .wrs-text {
+          position: absolute;
+          display: inline-block;
+          z-index: 10;
+          color: white;
+          text-align: center;
+          vertical-align: middle;
+          width: calc(99vw / 3.38);
+          font-size: 5.5vh;
+          opacity: 0.5;
+          &.top {
+            transition: margin-top 0.08s ease-out;
+            margin-top: 15vh;
+          }
+          &.center {
+            transition: margin-top 0.08s ease-out;
+            margin-top: 19vh;
+          }
+          &.bottom {
+            transition: margin-top 0.08s ease-out;
+            margin-top: 23vh;
+          }
+        }
+      }
+      .wrs-container:hover {
+        & .wrs-image {
+          transition: all 0.08s ease-in;
+          background-position: 50% 10%;
+          height: 100%;
+          -webkit-clip-path: polygon(80% 0, 99% 53%, 80% 100%, 20% 100%, 1% 54%, 20% 0);
+          clip-path: polygon(80% 0, 99% 53%, 80% 100%, 20% 100%, 1% 54%, 20% 0);
+        }
+        & .wrs-text {
+          opacity: 1;
+        }
+        & .top {
+          transition: margin-top 0.08s ease-in;
+          margin-top: 20vh;
+        }
+        & .center {
+          transition: margin-top 0.08s ease-in;
+          margin-top: 35vh;
+        }
+        & .bottom {
+          transition: margin-top 0.08s ease-in;
+          margin-top: 50vh;
+        }
+      }
     }
   }
-}
-
-.animation-layer:hover {
-  transition: transform .08s ease-in;
-  transform: scale(1.02);
-}
-
-.rotv-container:hover{
-  & .rotv-image {
-    transition: all 0.2s ease-in;
-    opacity: 0.75;
-    margin-left: -21.9vh;
-  }
-  & .rotv-text {
-  }
-
-}
-
-.rotv-container:hover  .rotv-text {
-  transition: opacity 0.1s ease-in;
-  opacity: 1 !important;
 }
