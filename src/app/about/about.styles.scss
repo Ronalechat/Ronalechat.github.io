@@ -1,0 +1,70 @@
+// Color variables
+$mzl-red: #F78888;
+$mzl-yellow: #F3D250;
+$mzl-light-blue: #90CCF4;
+$mzl-blue: #5DA2D5;
+$mzl-dark-grey: #3E3E3E;
+$mzl-grey: #ECECEC;
+$mzl-green: #4FC5B6;
+
+html, body {
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+about {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.about-container {
+  margin:10vh 11vh 0 11vh;
+  background-color: $mzl-grey;
+  height: 80vh;
+  overflow-y: hidden;
+  font-size:0;
+  display: flex;
+  .half {
+    font-size: 0;
+    width:50%;
+    display: inline-block;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    &-left {
+      background-color: $mzl-yellow;
+    }
+    &-right {
+      background-color:$mzl-dark-grey;
+
+    }
+    .animation-layer {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      .self-image {
+        background-image: url('/assets/img/walkleysday2.JPG');
+        background-color:pink;
+        display: block;
+        width: 340px;
+        height: 280px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        -webkit-clip-path: polygon(61% 0, 100% 11%, 100% 100%, 44% 100%, 52% 56%, 35% 22%);
+        clip-path: polygon(61% 0, 100% 11%, 100% 100%, 44% 100%, 52% 56%, 35% 22%);
+      }
+    }
+  }
+}
+
+.animation-layer:hover {
+  transition: transform .1s ease-in;
+  transform: scale(0.98);
+}

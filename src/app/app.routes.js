@@ -10,6 +10,10 @@
         url: '/',
         component: 'home',
       })
+      .state('about', {
+        url: '/about',
+        component: 'about',
+      })
       .state('contact', {
         url: '/contact',
         component: 'contact',

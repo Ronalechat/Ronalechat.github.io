@@ -29,13 +29,15 @@ home {
   height: 80vh;
   overflow-y: hidden;
   font-size:0;
+  display: flex;
   .third {
     font-size: 0;
     width:33.33333333%;
     display: inline-block;
-    height: calc(100%);
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     .animation-layer {
+      transition: transform .1s ease-out;
       display: inline-block;
       height:100%;
       width: 100%;
@@ -47,17 +49,85 @@ home {
   .home-link{
     &-about {
       background-color: $mzl-yellow;
+      z-index: 100;
     }
-    &-work {
+    &-rotv {
       background-color: $mzl-light-blue;
+      .rotv-container {
+        opacity: 1;
+        text-align: left;
+        .rotv-text {
+          position: absolute;
+          z-index: 10;
+          color: white;
+          text-align: left;
+          padding: 1vh;
+        }
+        .credit {
+          opacity: 0.8;
+          margin-left: 16vw;
+          margin-top: 74vh;
+        }
+        .title-text {
+          opacity: 0.6;
+          font-size: 7vh;
+          &.top {
+            margin-top: 42vh;
+          }
+          &.middle {
+            margin-top: 47.1vh;
+          }
+          &.bottom {
+            margin-top:52.2vh;
+          }
+        }
+        .rotv-link {
+          width: 100%;
+          padding-top: 66.666666%;
+          position: relative;
+          .rotv-image {
+            transition: all .08s ease-out;
+            position: relative;
+            background-image: url('/assets/img/ROTVstabby.jpg');
+            width:120vh;
+            height:80vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            left: -26.3vh;
+            display: block;
+            -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
+clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
+            // -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 31% 100%, 22% 51%, 36% 0);
+            // clip-path: polygon(75% 0, 88% 50%, 74% 100%, 31% 100%, 22% 51%, 36% 0);
+          }
+        }
+      }
     }
     &-contact {
       background-color: $mzl-red;
+      z-index: 100;
     }
   }
 }
 
 .animation-layer:hover {
-  transition: transform .1s ease-in;
-  transform: scale(0.98);
+  transition: transform .08s ease-in;
+  transform: scale(1.02);
+}
+
+.rotv-container:hover{
+  & .rotv-image {
+    transition: all 0.2s ease-in;
+    opacity: 0.75;
+    margin-left: -21.9vh;
+  }
+  & .rotv-text {
+  }
+
+}
+
+.rotv-container:hover  .rotv-text {
+  transition: opacity 0.1s ease-in;
+  opacity: 1 !important;
 }
