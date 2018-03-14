@@ -8,11 +8,10 @@ $mzl-grey: #ECECEC;
 
 .full-height {
   width:6vw;
-  height:100vh;
+  min-height:100vh;
   display: inline-block;
   text-align: center;
 }
-
 
 .full-height-left {
   background-color: $mzl-grey;
@@ -21,9 +20,9 @@ $mzl-grey: #ECECEC;
   .clickable {
     .full-height {
       .vertical-text-left {
-        position: relative;
+        position: absolute;
         top: 46%;
-        left: 35%;
+        // left: 35%;
         transform: translate(-50%, -50%);
         display: inline-block;
         vertical-align: -webkit-baseline-middle;
@@ -55,7 +54,7 @@ $mzl-grey: #ECECEC;
     transition-delay: 400ms;
     transition: font-size 600ms ease-in;
     font-size: 7vh;
-    margin-top: 28vh !important;
+    margin-top: 45vh !important;
   }
   & .fa-child:after {
     transition: all 1s ease-in;

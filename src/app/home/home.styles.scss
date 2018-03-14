@@ -10,6 +10,8 @@ $mzl-green: #4FC5B6;
 html, body {
   width:100%;
   height:100%;
+  max-height: 100vh;
+  max-width: 100vw;
   margin:0px;
   padding:0px;
   overflow-x: hidden;
@@ -51,8 +53,52 @@ home {
     }
   }
   .home-link{
-    &-about {
+    &-plut {
       background-color: $mzl-yellow;
+      .plut-container {
+        .plut-image {
+          transition: all .08s ease-out;
+          position: relative;
+          background-image: url('/assets/img/justplutoralogo.png');
+          width:100%;
+          height:100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          display: block;
+          -webkit-clip-path: polygon(5% 3%, 95% 3%, 95% 97%, 5% 97%);
+          clip-path: polygon(5% 3%, 95% 3%, 95% 97%, 5% 97%);
+        }
+        .plut-text {
+          position: absolute;
+          z-index: 10;
+          color: $mzl-dark-grey;
+          text-align: left;
+          padding:0;
+          opacity: 0.7;
+          &.job-title{
+            width: calc(99vw / 3.38);
+            text-align: center;
+            margin-top:73vh;
+            font-size: 4vh;
+
+          }
+        }
+      }
+      .plut-container:hover {
+        & .plut-image {
+          transition: all 0.08s ease-in;
+          background-image: url('/assets/img/plutoralogoandname.png');
+          -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+        }
+        & .plutora-name {
+          visibility: hidden;
+        }
+        & .job-title {
+          opacity: 1;
+        }
+      }
     }
     &-rotv {
       background-color: $mzl-light-blue;
@@ -68,14 +114,15 @@ home {
         }
         .credit {
           opacity: 0.7;
-          margin-left: 10vw;
-          margin-top: 75vh;
-          min-width: 18vw;
-          width:100%;
+          text-align: center;
+          margin-top: 73vh;
+          width: calc(99vw / 3.38);
+          padding:0;
         }
         .title-text {
           opacity: 0.5;
           font-size: 7vh;
+          margin-left: 1.5vw;
           &.top {
             margin-top: 42vh;
           }
@@ -101,22 +148,26 @@ home {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            left: -45.4%;
+            left: -13.4vw;
+            opacity: 0.8;
             display: block;
-            -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
-            clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
+            -webkit-clip-path: polygon(24.5% 3%, 68% 3%, 68% 97%, 24.5% 97%);
+            clip-path: polygon(24.5% 3%, 68% 3%, 68% 97%, 24.5% 97%);
           }
         }
       }
       .rotv-container:hover{
         & .rotv-image {
           transition: all 0.08s ease-in;
-          opacity: 0.75;
-          left: -82.8%;
+          opacity: 1;
+          left: -24.3vw;
+          -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
+          clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
         }
         & .rotv-text {
           transition: opacity 0.08s ease-in;
           opacity: 1;
+          margin-left: 0;
         }
       }
     }
@@ -128,7 +179,6 @@ home {
           position:relative;
         }
         .wrs-image {
-          margin-left: 0;
           transition: all 0.08s ease-out;
           position: relative;
           background-image: url('/assets/img/wrsScreenGrab.png');
@@ -136,11 +186,11 @@ home {
           height:190%;
           background-size: cover;
           background-repeat: no-repeat;
-          background-position: 110% 50%;
-          left: -0.1vw;
+          background-position: 100% 50%;
           display: block;
-          -webkit-clip-path: polygon(80% 0, 100% 53%, 100% 100%, 0 100%, 0 54%, 0 0);
-          clip-path: polygon(80% 0, 100% 53%, 100% 100%, 0 100%, 0 54%, 0 0);
+          opacity: 0.8;
+          -webkit-clip-path: polygon(5% 1.5%, 95% 1.5%, 95% 51%, 5% 51%);
+          clip-path: polygon(5% 1.5%, 95% 1.5%, 95% 51%, 5% 51%);
         }
         .wrs-text {
           position: absolute;
@@ -150,8 +200,8 @@ home {
           text-align: center;
           vertical-align: middle;
           width: calc(99vw / 3.38);
-          font-size: 5.5vh;
-          opacity: 0.5;
+          font-size: 5vh;
+          opacity: 0.7;
           &.top {
             transition: margin-top 0.08s ease-out;
             margin-top: 15vh;
@@ -164,6 +214,10 @@ home {
             transition: margin-top 0.08s ease-out;
             margin-top: 23vh;
           }
+          &.credit {
+            font-size: 4vh;
+            margin-top: 73vh;
+          }
         }
       }
       .wrs-container:hover {
@@ -171,6 +225,7 @@ home {
           transition: all 0.08s ease-in;
           background-position: 50% 10%;
           height: 100%;
+          opacity: 1;
           -webkit-clip-path: polygon(80% 0, 99% 53%, 80% 100%, 20% 100%, 1% 54%, 20% 0);
           clip-path: polygon(80% 0, 99% 53%, 80% 100%, 20% 100%, 1% 54%, 20% 0);
         }
@@ -183,11 +238,11 @@ home {
         }
         & .center {
           transition: margin-top 0.08s ease-in;
-          margin-top: 35vh;
+          margin-top: 37vh;
         }
         & .bottom {
           transition: margin-top 0.08s ease-in;
-          margin-top: 50vh;
+          margin-top: 54vh;
         }
       }
     }

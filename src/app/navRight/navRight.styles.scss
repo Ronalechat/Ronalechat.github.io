@@ -13,9 +13,9 @@ $mzl-grey: #ECECEC;
   .clickable {
     .full-height {
       .vertical-text-right {
-        position: relative;
-        top: 57%;
-        left: 62%;
+        position: absolute;
+        top: 83%;
+        left: 98%;
         transform: translate(-50%, -50%);
         display: inline-block;
         vertical-align: -webkit-baseline-middle;
@@ -54,7 +54,7 @@ $mzl-grey: #ECECEC;
                 transform 0.3s ease-in;
     font-size: 7vh;
     visibility: visible;
-    margin-top: 42vh;
+    margin-top: 49vh;
     color:#fff;
     transform: rotate(90deg);
   }
