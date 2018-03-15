@@ -143,16 +143,16 @@ home {
             transition: all .08s ease-out;
             position: relative;
             background-image: url('/assets/img/ROTVstabby.jpg');
-            width:120vh;
+            width:150%;
             height:100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            left: -13.4vw;
+            left: -9.4vw;
             opacity: 0.8;
             display: block;
-            -webkit-clip-path: polygon(24.5% 3%, 68% 3%, 68% 97%, 24.5% 97%);
-            clip-path: polygon(24.5% 3%, 68% 3%, 68% 97%, 24.5% 97%);
+            -webkit-clip-path: polygon(24.5% 3%, 84.7% 3%, 84.7% 97%, 24.5% 97%);
+            clip-path: polygon(24.5% 3%, 84.7% 3%, 84.7% 97%, 24.5% 97%);
           }
         }
       }
@@ -160,9 +160,9 @@ home {
         & .rotv-image {
           transition: all 0.08s ease-in;
           opacity: 1;
-          left: -24.3vw;
-          -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
-          clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
+          left: -13.3vw;
+          // -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
+          clip-path: polygon(85% 0, 96% 55%, 85% 100%, 0% 100%, 22% 49%, 0% 0);
         }
         & .rotv-text {
           transition: opacity 0.08s ease-in;
