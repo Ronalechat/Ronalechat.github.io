@@ -160,9 +160,9 @@ home {
         & .rotv-image {
           transition: all 0.08s ease-in;
           opacity: 1;
-          left: -13.3vw;
-          // -webkit-clip-path: polygon(75% 0, 88% 50%, 74% 100%, 33% 100%, 22% 49%, 33% 0);
-          clip-path: polygon(85% 0, 96% 55%, 85% 100%, 0% 100%, 22% 49%, 0% 0);
+          left: -15vw;
+          -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
         }
         & .rotv-text {
           transition: opacity 0.08s ease-in;
@@ -226,8 +226,8 @@ home {
           background-position: 50% 10%;
           height: 100%;
           opacity: 1;
-          -webkit-clip-path: polygon(80% 0, 99% 53%, 80% 100%, 20% 100%, 1% 54%, 20% 0);
-          clip-path: polygon(80% 0, 99% 53%, 80% 100%, 20% 100%, 1% 54%, 20% 0);
+          -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
         }
         & .wrs-text {
           opacity: 1;

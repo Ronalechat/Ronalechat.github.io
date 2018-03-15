@@ -31,9 +31,9 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
       font-weight: bold;
       font-size: 42px;
       padding:6px 6px 2px 6px;
-      color: $mzl-dark-grey;
+      color: $mzl-grey;
       position: relative;
-      top:50%;
+      top:4%;
       left:50%;
       transform: translate(-50%, -50%);
       float:left;
@@ -62,6 +62,34 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
       }
     }
   }
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-color: $mzl-dark-grey;
+  margin: 28.87px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: relative;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 85.2%;
+  border-bottom: 28.87px solid $mzl-dark-grey;
+}
+
+.hexagon:after {
+  top: 47.9%;
+  width: 0;
+  border-top: 28.87px solid $mzl-dark-grey;
 }
 
 .pull-top {
