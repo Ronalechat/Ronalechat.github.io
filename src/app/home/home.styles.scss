@@ -68,6 +68,8 @@ home {
           display: block;
           -webkit-clip-path: polygon(5% 3%, 95% 3%, 95% 97%, 5% 97%);
           clip-path: polygon(5% 3%, 95% 3%, 95% 97%, 5% 97%);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
         }
         .plut-text {
           position: absolute;
@@ -75,13 +77,12 @@ home {
           color: $mzl-dark-grey;
           text-align: left;
           padding:0;
-          opacity: 0.7;
+          opacity: 0;
           &.job-title{
             width: calc(99vw / 3.38);
             text-align: center;
             margin-top:73vh;
             font-size: 4vh;
-
           }
         }
       }
@@ -91,6 +92,8 @@ home {
           background-image: url('/assets/img/plutoralogoandname.png');
           -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
         }
         & .plutora-name {
           visibility: hidden;
@@ -111,25 +114,25 @@ home {
           color: white;
           text-align: left;
           padding: 0.6vh;
+          opacity: 0;
         }
         .credit {
-          opacity: 0.7;
           text-align: center;
           margin-top: 73vh;
           width: calc(99vw / 3.38);
           padding:0;
         }
         .title-text {
-          opacity: 0.5;
           font-size: 7vh;
           margin-left: 1.5vw;
+          width: calc(99vw / 3.45);
           &.top {
             margin-top: 42vh;
           }
           &.middle {
             margin-top: 47.1vh;
             min-width: 20vw;
-            width:100%;
+
           }
           &.bottom {
             margin-top:52.2vh;
@@ -153,6 +156,8 @@ home {
             display: block;
             -webkit-clip-path: polygon(24.5% 3%, 84.7% 3%, 84.7% 97%, 24.5% 97%);
             clip-path: polygon(24.5% 3%, 84.7% 3%, 84.7% 97%, 24.5% 97%);
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
           }
         }
       }
@@ -160,9 +165,11 @@ home {
         & .rotv-image {
           transition: all 0.08s ease-in;
           opacity: 1;
-          left: -15vw;
+          left: -14.9vw;
           -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
         }
         & .rotv-text {
           transition: opacity 0.08s ease-in;
@@ -181,27 +188,30 @@ home {
         .wrs-image {
           transition: all 0.08s ease-out;
           position: relative;
-          background-image: url('/assets/img/wrsScreenGrab.png');
+          background-image: url('/assets/img/wrsbg.png');
           width:100%;
           height:190%;
           background-size: cover;
           background-repeat: no-repeat;
-          background-position: 100% 50%;
+          background-position: 105% 50%;
           display: block;
           opacity: 0.8;
           -webkit-clip-path: polygon(5% 1.5%, 95% 1.5%, 95% 51%, 5% 51%);
           clip-path: polygon(5% 1.5%, 95% 1.5%, 95% 51%, 5% 51%);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
         }
         .wrs-text {
           position: absolute;
           display: inline-block;
           z-index: 10;
           color: white;
-          text-align: center;
+          text-align: left;
           vertical-align: middle;
           width: calc(99vw / 3.38);
           font-size: 5vh;
-          opacity: 0.7;
+          opacity: 0;
+          // visibility: hidden;
           &.top {
             transition: margin-top 0.08s ease-out;
             margin-top: 15vh;
@@ -223,26 +233,33 @@ home {
       .wrs-container:hover {
         & .wrs-image {
           transition: all 0.08s ease-in;
-          background-position: 50% 10%;
+          background-position: 50% 50%;
           height: 100%;
           opacity: 1;
           -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
         }
         & .wrs-text {
           opacity: 1;
+          visibility: visible;
+          padding: 1vh;
         }
         & .top {
           transition: margin-top 0.08s ease-in;
-          margin-top: 20vh;
+          margin-top: 46vh;
         }
         & .center {
           transition: margin-top 0.08s ease-in;
-          margin-top: 37vh;
+          margin-top: 50vh;
         }
         & .bottom {
           transition: margin-top 0.08s ease-in;
           margin-top: 54vh;
+        }
+        & .credit {
+          text-align: center;
         }
       }
     }

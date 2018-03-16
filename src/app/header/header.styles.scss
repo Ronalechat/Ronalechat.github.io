@@ -25,11 +25,12 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
     width: 50vw;
     text-align: -webkit-center;
     .home-link {
+      line-height: 25px;
       text-decoration: none;
       position: relative;
       font-family: 'PT Sans Narrow', sans-serif;
       font-weight: bold;
-      font-size: 42px;
+      font-size: 34px;
       padding:6px 6px 2px 6px;
       color: $mzl-grey;
       position: relative;
@@ -39,6 +40,18 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
       float:left;
       display: inline-block;
       vertical-align: middle;
+      .name {
+        &-first {
+
+        }
+        &-middle {
+
+        }
+        &-last {
+
+        }
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -58,7 +71,7 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
         height: 5px;
-        margin-bottom: -6px;
+        margin-bottom: -3px;
       }
     }
   }
@@ -82,14 +95,18 @@ $thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
 }
 
 .hexagon:before {
-  bottom: 85.2%;
+  bottom: 84%;
   border-bottom: 28.87px solid $mzl-dark-grey;
 }
 
 .hexagon:after {
-  top: 47.9%;
+  top: 4%;
   width: 0;
   border-top: 28.87px solid $mzl-dark-grey;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: -1;
 }
 
 .pull-top {

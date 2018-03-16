@@ -38,33 +38,66 @@ about {
     font-family: 'Poppins', sans-serif;
     &-left {
       background-color: $mzl-yellow;
+      .about-blurb {
+        font-size: 3vh;
+        color: $mzl-dark-grey;
+        padding: 2vh;
+        display: inline-flex;
+        line-height: 4vh;
+        text-align: left;
+        position: relative;
+        width: calc(100% - 4vh);
+      }
+
+      .icon-wrapper {
+        bottom:0;
+        .icon-container {
+          display: inline-block;
+          width: 20%;
+          .icon {
+            transition: all 0.08s ease-out;
+            font-size:6vh;
+          }
+          .icon-text {
+            transition: color 0.08s ease-out;
+            font-size: 2vh;
+            display: block;
+            font-weight: normal;
+            visibility: hidden;
+            color: #fff;
+          }
+        }
+        .icon-container:hover {
+          color: #fff;
+          & .icon {
+            transition: all 0.08s ease-in;
+            transform: scale(1.25);
+          }
+          & .icon-text {
+            transition: color 0.08s ease-in;
+            visibility: visible;
+          }
+        }
+      }
     }
     &-right {
       background-color:$mzl-dark-grey;
-
+      .self-image {
+        position: relative;
+        width:100%;
+        height:100%;
+        background-size: cover;
+        background-position: 20% 50%;
+        background-image: url('/assets/img/walkleysday2.JPG');
+        display: block;
+        background-repeat: no-repeat;
+        filter: grayscale(100%);
+      }
     }
     .animation-layer {
       display: inline-block;
       height: 100%;
       width: 100%;
-      .self-image {
-        background-image: url('/assets/img/walkleysday2.JPG');
-        background-color:pink;
-        display: block;
-        width: 340px;
-        height: 280px;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        -webkit-background-size: 100% 100%;
-        -webkit-clip-path: polygon(61% 0, 100% 11%, 100% 100%, 44% 100%, 52% 56%, 35% 22%);
-        clip-path: polygon(61% 0, 100% 11%, 100% 100%, 44% 100%, 52% 56%, 35% 22%);
-      }
     }
   }
 }
-
-// .animation-layer:hover {
-//   transition: transform .1s ease-in;
-//   transform: scale(0.98);
-// }
