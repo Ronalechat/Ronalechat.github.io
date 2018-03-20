@@ -1,0 +1,267 @@
+// Color variables
+$mzl-red: #F78888;
+$mzl-yellow: #F3D250;
+$mzl-light-blue: #90CCF4;
+$mzl-blue: #5DA2D5;
+$mzl-dark-grey: #3E3E3E;
+$mzl-grey: #ECECEC;
+$mzl-green: #4FC5B6;
+
+html, body {
+  width:100%;
+  height:100%;
+  max-height: 100vh;
+  max-width: 100vw;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+home {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.home-container {
+  margin:10vh 0 0 0;
+  background-color: $mzl-grey;
+  height: 80vh;
+  overflow-y: hidden;
+  font-size:0;
+  display: flex;
+  .third {
+    font-size: 0;
+    width:33.33333333%;
+    display: inline-block;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    .animation-layer {
+      transition: transform .08s ease-out;
+      display: inline-block;
+      height:100%;
+      width: 100%;
+      span {
+        font-size: 5vh
+      }
+    }
+    .animation-layer:hover {
+      transition: transform .08s ease-in;
+      transform: scale(1.02);
+    }
+  }
+  .home-link{
+    &-plut {
+      background-color: $mzl-yellow;
+      .plut-container {
+        .plut-image {
+          transition: all .08s ease-out;
+          position: relative;
+          background-image: url('/assets/img/justplutoralogo.png');
+          width:100%;
+          height:100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          display: block;
+          -webkit-clip-path: polygon(5% 3%, 95% 3%, 95% 97%, 5% 97%);
+          clip-path: polygon(5% 3%, 95% 3%, 95% 97%, 5% 97%);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+        .plut-text {
+          position: absolute;
+          z-index: 10;
+          color: $mzl-dark-grey;
+          text-align: left;
+          padding:0;
+          opacity: 0;
+          &.job-title{
+            width: calc(99vw / 3.38);
+            text-align: center;
+            margin-top:73vh;
+            font-size: 4vh;
+          }
+        }
+      }
+      .plut-container:hover {
+        & .plut-image {
+          transition: all 0.08s ease-in;
+          background-image: url('/assets/img/plutoralogoandname.png');
+          -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+        & .plutora-name {
+          visibility: hidden;
+        }
+        & .job-title {
+          opacity: 1;
+        }
+      }
+    }
+    &-rotv {
+      background-color: $mzl-light-blue;
+      .rotv-container {
+        opacity: 1;
+        text-align: left;
+        .rotv-text {
+          position: absolute;
+          z-index: 10;
+          color: white;
+          text-align: left;
+          padding: 0.6vh;
+          opacity: 0;
+        }
+        .credit {
+          text-align: center;
+          margin-top: 73vh;
+          width: calc(99vw / 3.38);
+          padding:0;
+        }
+        .title-text {
+          font-size: 7vh;
+          margin-left: 1.5vw;
+          width: calc(99vw / 3.45);
+          &.top {
+            margin-top: 42vh;
+          }
+          &.middle {
+            margin-top: 47.1vh;
+            min-width: 20vw;
+
+          }
+          &.bottom {
+            margin-top:52.2vh;
+          }
+        }
+        .rotv-link {
+          width: 100%;
+          padding-top: 66.666666%;
+          position: relative;
+          .rotv-image {
+            transition: all .08s ease-out;
+            position: relative;
+            background-image: url('/assets/img/ROTVstabby.jpg');
+            width:150%;
+            height:100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            left: -9.4vw;
+            opacity: 0.8;
+            display: block;
+            -webkit-clip-path: polygon(24.5% 3%, 84.7% 3%, 84.7% 97%, 24.5% 97%);
+            clip-path: polygon(24.5% 3%, 84.7% 3%, 84.7% 97%, 24.5% 97%);
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+          }
+        }
+      }
+      .rotv-container:hover{
+        & .rotv-image {
+          transition: all 0.08s ease-in;
+          opacity: 1;
+          left: -14.9vw;
+          -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+        & .rotv-text {
+          transition: opacity 0.08s ease-in;
+          opacity: 1;
+          margin-left: 0;
+        }
+      }
+    }
+    &-wrs {
+      background-color: $mzl-red;
+      z-index: 12;
+      .wrs-container {
+        .wrs-link {
+          position:relative;
+        }
+        .wrs-image {
+          transition: all 0.08s ease-out;
+          position: relative;
+          background-image: url('/assets/img/wrsbg.png');
+          width:100%;
+          height:190%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 105% 50%;
+          display: block;
+          opacity: 0.8;
+          -webkit-clip-path: polygon(5% 1.5%, 95% 1.5%, 95% 51%, 5% 51%);
+          clip-path: polygon(5% 1.5%, 95% 1.5%, 95% 51%, 5% 51%);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+        .wrs-text {
+          position: absolute;
+          display: inline-block;
+          z-index: 10;
+          color: white;
+          text-align: left;
+          vertical-align: middle;
+          width: calc(99vw / 3.38);
+          font-size: 5vh;
+          opacity: 0;
+          // visibility: hidden;
+          &.top {
+            transition: margin-top 0.08s ease-out;
+            margin-top: 15vh;
+          }
+          &.center {
+            transition: margin-top 0.08s ease-out;
+            margin-top: 19vh;
+          }
+          &.bottom {
+            transition: margin-top 0.08s ease-out;
+            margin-top: 23vh;
+          }
+          &.credit {
+            font-size: 4vh;
+            margin-top: 73vh;
+          }
+        }
+      }
+      .wrs-container:hover {
+        & .wrs-image {
+          transition: all 0.08s ease-in;
+          background-position: 50% 50%;
+          height: 100%;
+          opacity: 1;
+          -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+          -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+        & .wrs-text {
+          opacity: 1;
+          visibility: visible;
+          padding: 1vh;
+        }
+        & .top {
+          transition: margin-top 0.08s ease-in;
+          margin-top: 46vh;
+        }
+        & .center {
+          transition: margin-top 0.08s ease-in;
+          margin-top: 50vh;
+        }
+        & .bottom {
+          transition: margin-top 0.08s ease-in;
+          margin-top: 54vh;
+        }
+        & .credit {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// Color variables
+$mzl-red: #F78888;
+$mzl-yellow: #F3D250;
+$mzl-light-blue: #90CCF4;
+$mzl-blue: #5DA2D5;
+$mzl-dark-grey: #3E3E3E;
+$mzl-grey: #ECECEC;
+$mzl-green: #4FC5B6;
+$thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+
+.header {
+  height: 9vh;
+  width:100%;
+  display: block;
+  text-align: center;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: $mzl-grey;
+  .border-container {
+    border-bottom: 1px solid $mzl-dark-grey;
+    height: 8.2vh;
+    display: inline-block;
+    width: 50vw;
+    text-align: -webkit-center;
+    .home-link {
+      line-height: 25px;
+      text-decoration: none;
+      position: relative;
+      font-family: 'PT Sans Narrow', sans-serif;
+      font-weight: bold;
+      font-size: 34px;
+      padding:6px 6px 2px 6px;
+      color: $mzl-grey;
+      position: relative;
+      top:4%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      float:left;
+      display: inline-block;
+      vertical-align: middle;
+      .name {
+        &-first {
+
+        }
+        &-middle {
+
+        }
+        &-last {
+
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $mzl-blue;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: $thetransition;
+        transition: $thetransition;
+      }
+      &:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        height: 5px;
+        margin-bottom: -3px;
+      }
+    }
+  }
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.74px;
+  background-color: $mzl-dark-grey;
+  margin: 28.87px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: relative;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 84%;
+  border-bottom: 28.87px solid $mzl-dark-grey;
+}
+
+.hexagon:after {
+  top: 4%;
+  width: 0;
+  border-top: 28.87px solid $mzl-dark-grey;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+}
+
+.pull-top {
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,67 @@
+// Color variables
+$mzl-red: #F78888;
+$mzl-yellow: #F3D250;
+$mzl-light-blue: #90CCF4;
+$mzl-blue: #5DA2D5;
+$mzl-dark-grey: #3E3E3E;
+$mzl-grey: #ECECEC;
+
+.full-width {
+  width:100%;
+  height:10vh;
+}
+
+.footer {
+  display: block;
+  text-align: center;
+  background-color: $mzl-grey;
+  transition: all 0.3s ease-out;
+  .clickable {
+    div {
+      .footer-text {
+        position: relative;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        float:left;
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 7vh;
+        white-space: nowrap;
+        color: $mzl-dark-grey;
+        font-weight: bold;
+      }
+      .fa-cubes:before {
+        font-size: 7vh;
+        visibility: hidden;
+      }
+      .fa-cubes {
+        color: $mzl-grey;
+        margin-right:200vh;
+      }
+    }
+  }
+}
+
+.footer:hover {
+  transition: all .4s ease-in;
+  background-color: $mzl-light-blue;
+  & .footer-text {
+    visibility: hidden;
+  }
+  & .fa-cubes {
+    font-size: 7vh;
+    visibility: visible;
+    color: $mzl-grey;
+    margin-top: 1vh;
+    margin-left: -10vw;
+    margin-right:0 !important;
+  }
+}
+
+.pull-bottom {
+  position: absolute;
+  bottom: 0;
+}
