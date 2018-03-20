@@ -18,7 +18,7 @@ html, body {
 
 about {
   display: inline-block;
-  text-align: center;
+  // text-align: center;
   width: 100%;
   height: 100%;
 }
@@ -38,25 +38,48 @@ about {
     font-family: 'Poppins', sans-serif;
     &-left {
       background-color: $mzl-yellow;
+      .bigtext {
+        font-size: 10vh;
+        text-align: left;
+        display: inline-block;
+        padding: 4vh 0 0 3vw;
+      }
       .about-blurb {
         font-size: 3vh;
         color: $mzl-dark-grey;
-        padding: 2vh;
-        display: inline-flex;
+        padding: 2vh 0vh 2vh 2vw;
+        // left: 2vh;
+        display: inline-block;
+        float: left;
         line-height: 4vh;
         text-align: left;
         position: relative;
-        width: calc(100% - 4vh);
+        width: calc(100% - 2vw);
       }
-
+      .resume {
+        font-size: 2.5vh;
+        a {
+          text-decoration: none;
+          color: $mzl-grey;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
       .icon-wrapper {
-        bottom:0;
+        position: absolute;
+        bottom:12vh;
+        width: 44vw;
+        text-align: center;
         .icon-container {
           display: inline-block;
-          width: 20%;
+          padding: 0 1.5vw;
           .icon {
             transition: all 0.08s ease-out;
             font-size:6vh;
+          }
+          .fa-gem {
+            transform: rotate(330deg);
           }
           .icon-text {
             transition: color 0.08s ease-out;
@@ -71,11 +94,15 @@ about {
           color: #fff;
           & .icon {
             transition: all 0.08s ease-in;
-            transform: scale(1.25);
+            transform: scale(1.3);
           }
           & .icon-text {
             transition: color 0.08s ease-in;
             visibility: visible;
+          }
+          & .fa-gem {
+            transition: all 0.08s ease-in;
+            transform: scale(1.25) rotate(330deg);
           }
         }
       }
