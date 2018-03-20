@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Michael Z Lin</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Emblema+One|Montserrat+Subrayada:400,700|PT+Sans+Narrow:400,700|Poppins:700,800');
+    </style>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- build:css(src) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- Bower dependencies styles will go here after Gulp `inject` task. -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp/serve) styles/app.css -->
+    <!-- inject:css -->
+    <!-- Output styles will go here after Gulp `inject` task. -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<div ui-view=""></div>
+
+<!-- build:js(src) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- Bower dependencies scripts will go here after Gulp `inject` task. -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({src,.tmp/partials}) scripts/app.js -->
+
+<!-- inject:js -->
+<!-- Scripts will go here after Gulp `inject` task. -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- Angular templates will be converted to scripts and go here after Gulp `build` task. -->
+<!-- endinject -->
+
+<!-- endbuild -->
+</body>
+</html>
